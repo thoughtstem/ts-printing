@@ -416,7 +416,7 @@
                              ((collection-apply (curryr try-take 5) day-five)
                               [FRONT-BG-COLOR    bright-blue]
                               [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(more-enemy)")]))))
+                              [FRONT-TITLE       (title "(more-enemy)")]))))|#
 
 (define (ts-3d-exploration-asp-2020->Desktop)
   (local-require ts-3d-exploration-asp-2020/katas)
@@ -443,7 +443,7 @@
                 [FRONT-BG-COLOR googly-blue]
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(animations)")])
-               )))|#
+               )))
 
 (define (ts-k2-clicker-asp-2020->Desktop)
   (local-require ts-k2-clicker-asp-2020/katas)
@@ -491,7 +491,7 @@
   ;(ts-k2-hero-summer-camp-2019->Desktop)
   ;(ts-k2-zoo-summer-camp-2019->Desktop)
   ;(ts-k2-asp-fall-2019->Desktop)
-  ;(ts-3d-exploration-asp-2020->Desktop)
+  (ts-3d-exploration-asp-2020->Desktop)
   (ts-k2-clicker-asp-2020->Desktop)
 )
 
