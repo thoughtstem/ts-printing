@@ -22,13 +22,13 @@
     l
     (take l n)))
 
-#|
+
 ; ------ BATTLEARENA
-(define (ts-battle-arena-asp-2019->Desktop)
+#;(define (ts-battle-arena-asp-2019->Desktop)
   (local-require ts-battle-arena-asp-2019/katas)
 
   (set-fg-texture "battlearena-bg.jpg"
-    (begin-job "ts-battle-arena-asp-2019"     
+    (begin-job "battlearena"     
                ((collection-apply (curryr try-take 4) avatar-katas)
                  [FRONT-BG-COLOR googly-red]
                  [FRONT-FG-COLOR clear-white]
@@ -45,11 +45,11 @@
                  [FRONT-BG-COLOR    googly-green]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(powerup)")])
-               (background-katas ;Not 5 in here
+               ((collection-apply (curryr try-take 5) bg-and-level-design-katas)
                  [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(background)")]))))
-
+                 [FRONT-TITLE    (title "(level-design)")]))))
+#|
 (define (ts-battle-arena-avengers-summer-camp-2019->Desktop)
   (local-require ts-battle-arena-avengers-summer-camp-2019/katas)
 
@@ -126,14 +126,14 @@
                ((collection-apply (curryr try-take 5) trap-weapon-katas)
                  [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(trap-weapon)")]) )))
+                 [FRONT-TITLE    (title "(trap-weapon)")]) )))|#
 
 ; ---- SURVIVAL
-(define (ts-survival-asp-2019->Desktop)
+#;(define (ts-survival-asp-2019->Desktop)
   (local-require ts-survival-asp-2019/katas)
 
   (set-fg-texture "survival-bg.jpg"
-    (begin-job "ts-survival-asp-2019"
+    (begin-job "survival"
                ((collection-apply (curryr try-take 4) avatar-katas)
                  [FRONT-BG-COLOR    googly-red]
                  [FRONT-FG-COLOR clear-white]
@@ -150,11 +150,12 @@
                  [FRONT-BG-COLOR    googly-green]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(crafter)")]) 
-               (bg-katas
+               ((collection-apply (curryr try-take 5) bg-and-level-design-katas)
                  [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(background)")]))))
+                 [FRONT-TITLE    (title "(level-design)")]))))
 
+#|
 (define (ts-survival-minecraft-summer-camp-2019->Desktop)
   (local-require ts-survival-minecraft-summer-camp-2019/katas)
 
@@ -285,140 +286,64 @@
                ((collection-apply (curryr try-take 5) spell-katas)
                 [FRONT-BG-COLOR googly-purple]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(spell)")]) )))
+                [FRONT-TITLE    (title "(spell)")]) )))|#
 
 ; ---- K2
-(define (ts-k2-farm-summer-camp-2019->Desktop)
-  (local-require ts-k2-farm-summer-camp-2019/katas)
-
-  (set-fg-texture "k2-farm-bg.jpg"
-                  (begin-job "ts-k2-farm-summer-camp-2019"
-                             ((collection-apply (curryr try-take 4) day-one) 
-                              [FRONT-BG-COLOR    bright-red]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(food)")])
-                             ((collection-apply (curryr try-take 5) day-two) 
-                              [FRONT-BG-COLOR    bright-orange]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(food/coin)")])
-                             ((collection-apply (curryr try-take 5) day-three) 
-                              [FRONT-BG-COLOR    bright-yellow]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(coin)")])
-                             ((collection-apply (curryr try-take 5) day-four)
-                              [FRONT-BG-COLOR    bright-green]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(enemy)")])
-                             ((collection-apply (curryr try-take 5) day-five)
-                              [FRONT-BG-COLOR    bright-blue]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(more-enemy)")]))))
-
-(define (ts-k2-sea-summer-camp-2019->Desktop)
-  (local-require ts-k2-sea-summer-camp-2019/katas)
-
-  (set-fg-texture "k2-sea-bg.jpg" 
-                   (begin-job "ts-k2-sea-summer-camp-2019"
-                              ((collection-apply (curryr try-take 4) food-katas) 
-                               [FRONT-BG-COLOR    bright-red]
-                               [FRONT-FG-COLOR    clear-white]
-                               [FRONT-TITLE       (title "(food)")])
-                              ((collection-apply (curryr try-take 5) enemy-katas) 
-                               [FRONT-BG-COLOR    bright-orange]
-                               [FRONT-FG-COLOR    clear-white]
-                               [FRONT-TITLE       (title "(enemy)")])
-                              ((collection-apply (curryr try-take 5) more-enemy-katas) 
-                               [FRONT-BG-COLOR    bright-yellow]
-                               [FRONT-FG-COLOR    clear-white]
-                               [FRONT-TITLE       (title "(more-enemy)")])
-                              ((collection-apply (curryr try-take 5) friend-katas)
-                               [FRONT-BG-COLOR    bright-green]
-                               [FRONT-FG-COLOR    clear-white]
-                               [FRONT-TITLE       (title "(friend)")])
-                              ((collection-apply (curryr try-take 5) more-friend-katas)
-                               [FRONT-BG-COLOR    bright-blue]
-                               [FRONT-FG-COLOR    clear-white]
-                               [FRONT-TITLE       (title "(more-friend)")]))))
-
-(define (ts-k2-hero-summer-camp-2019->Desktop)
-  (local-require ts-k2-hero-summer-camp-2019/katas)
-
-  (set-fg-texture "k2-hero-bg.jpg"
-                  (begin-job "ts-k2-hero-summer-camp-2019"
-                             ((collection-apply (curryr try-take 4) day-one) 
-                              [FRONT-BG-COLOR    bright-red]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(basic)")])
-                             ((collection-apply (curryr try-take 5) day-two) 
-                              [FRONT-BG-COLOR    bright-orange]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(power)")])
-                             ((collection-apply (curryr try-take 5) day-three) 
-                              [FRONT-BG-COLOR    bright-yellow]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(power-color)")])
-                             ((collection-apply (curryr try-take 5) day-four)
-                              [FRONT-BG-COLOR    bright-green]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(power-ups)")])
-                             ((collection-apply (curryr try-take 5) day-five)
-                              [FRONT-BG-COLOR    bright-blue]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(multi-level)")]))))
-
-(define (ts-k2-zoo-summer-camp-2019->Desktop)
-  (local-require ts-k2-zoo-summer-camp-2019/katas)
-
-  (set-fg-texture "k2-zoo-bg.jpg"
-                  (begin-job "ts-k2-zoo-summer-camp-2019"
-                             ((collection-apply (curryr try-take 4) day-one) 
-                              [FRONT-BG-COLOR    bright-red]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(food)")])
-                             ((collection-apply (curryr try-take 5) day-two) 
-                              [FRONT-BG-COLOR    bright-orange]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(more-food)")])
-                             ((collection-apply (curryr try-take 5) day-three) 
-                              [FRONT-BG-COLOR    bright-yellow]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(coin)")])
-                             ((collection-apply (curryr try-take 5) day-four)
-                              [FRONT-BG-COLOR    bright-green]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(friend)")])
-                             ((collection-apply (curryr try-take 5) day-five)
-                              [FRONT-BG-COLOR    bright-blue]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(more-friend)")]))))
-
-(define (ts-k2-asp-fall-2019->Desktop)
-  (local-require ts-k2-asp-fall-2019/katas)
+(define (ts-k2-healer-asp-2019->Desktop)
+  (local-require ts-k2-healer-asp-2019/katas)
 
   (set-fg-texture "k2-animal-bg.jpg"
-                  (begin-job "ts-k2-asp-fall-2019"
-                             ((collection-apply (curryr try-take 4) day-one) 
-                              [FRONT-BG-COLOR    bright-red]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(food)")])
-                             ((collection-apply (curryr try-take 5) day-two) 
-                              [FRONT-BG-COLOR    bright-orange]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(friend)")])
-                             ((collection-apply (curryr try-take 5) day-three) 
-                              [FRONT-BG-COLOR    bright-yellow]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(more-friend)")])
-                             ((collection-apply (curryr try-take 5) day-four)
-                              [FRONT-BG-COLOR    bright-green]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(enemy)")])
-                             ((collection-apply (curryr try-take 5) day-five)
-                              [FRONT-BG-COLOR    bright-blue]
-                              [FRONT-FG-COLOR    clear-white]
-                              [FRONT-TITLE       (title "(more-enemy)")]))))|#
+    (begin-job "k2-healer-animal"
+               ((collection-apply (curryr try-take 4) day-one) 
+                [FRONT-BG-COLOR    bright-red]
+                [FRONT-FG-COLOR    clear-white]
+                [FRONT-TITLE       (title "(food)")])
+               ((collection-apply (curryr try-take 5) day-two) 
+                [FRONT-BG-COLOR    bright-orange]
+                [FRONT-FG-COLOR    clear-white]
+                [FRONT-TITLE       (title "(friend)")])
+               ((collection-apply (curryr try-take 5) day-three) 
+                [FRONT-BG-COLOR    bright-yellow]
+                [FRONT-FG-COLOR    clear-white]
+                [FRONT-TITLE       (title "(more-friend)")])
+               ((collection-apply (curryr try-take 5) day-four)
+                [FRONT-BG-COLOR    bright-green]
+                [FRONT-FG-COLOR    clear-white]
+                [FRONT-TITLE       (title "(enemy)")])
+               ((collection-apply (curryr try-take 5) day-five)
+                [FRONT-BG-COLOR    bright-blue]
+                [FRONT-FG-COLOR    clear-white]
+                [FRONT-TITLE       (title "(more-enemy)")]))))
 
-(define (ts-3d-exploration-asp-2020->Desktop)
+#;(define (ts-k2-clicker-asp-2020->Desktop)
+  (local-require ts-k2-clicker-asp-2020/katas)
+
+  (set-fg-texture "clicker-cartoon-bg.jpg"
+    (begin-job "k2-clicker-cartoon"     
+               ((collection-apply (curryr try-take 4) day-one)
+                [FRONT-BG-COLOR googly-red]
+                [FRONT-FG-COLOR clear-white]
+                [FRONT-TITLE    (title "(collect)")])
+               ((collection-apply (curryr try-take 5) day-two)
+                [FRONT-BG-COLOR googly-orange]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(more-collect)")])
+               ((collection-apply (curryr try-take 5) day-three)
+                [FRONT-BG-COLOR googly-yellow]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(avoid)")])
+               ((collection-apply (curryr try-take 5) day-four)
+                [FRONT-BG-COLOR googly-green]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(more-avoid)")])
+               ((collection-apply (curryr try-take 5) day-five)
+                [FRONT-BG-COLOR googly-blue]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(special)")])
+               )))
+
+; ========= VR
+#;(define (ts-3d-exploration-asp-2020->Desktop)
   (local-require ts-3d-exploration-asp-2020/katas)
 
   (set-fg-texture "3d-exploration-bg.jpg"
@@ -445,32 +370,6 @@
                 [FRONT-TITLE    (title "(animations)")])
                )))
 
-(define (ts-k2-clicker-asp-2020->Desktop)
-  (local-require ts-k2-clicker-asp-2020/katas)
-
-  (set-fg-texture "clicker-cartoon-bg.jpg"
-    (begin-job "clicker-cartoon"     
-               ((collection-apply (curryr try-take 4) day-one)
-                [FRONT-BG-COLOR googly-red]
-                [FRONT-FG-COLOR clear-white]
-                [FRONT-TITLE    (title "(collect)")])
-               ((collection-apply (curryr try-take 5) day-two)
-                [FRONT-BG-COLOR googly-orange]
-                [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(more-collect)")])
-               ((collection-apply (curryr try-take 5) day-three)
-                [FRONT-BG-COLOR googly-yellow]
-                [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(avoid)")])
-               ((collection-apply (curryr try-take 5) day-four)
-                [FRONT-BG-COLOR googly-green]
-                [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(more-avoid)")])
-               ((collection-apply (curryr try-take 5) day-five)
-                [FRONT-BG-COLOR googly-blue]
-                [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(special)")])
-               )))
 
 (define (all->Desktop)
   ;(ts-battle-arena-asp-2019->Desktop)
@@ -486,13 +385,10 @@
   ;(ts-adventure-mario-summer-camp-2019->Desktop)
   ;(ts-adventure-harrypotter-summer-camp-2019->Desktop)
 
-  ;(ts-k2-farm-summer-camp-2019->Desktop)
-  ;(ts-k2-sea-summer-camp-2019->Desktop)
-  ;(ts-k2-hero-summer-camp-2019->Desktop)
-  ;(ts-k2-zoo-summer-camp-2019->Desktop)
-  ;(ts-k2-asp-fall-2019->Desktop)
-  (ts-3d-exploration-asp-2020->Desktop)
-  (ts-k2-clicker-asp-2020->Desktop)
+  (ts-k2-healer-asp-2019->Desktop)
+  ;(ts-k2-clicker-asp-2020->Desktop)
+  
+  ;(ts-3d-exploration-asp-2020->Desktop)
 )
 
 
