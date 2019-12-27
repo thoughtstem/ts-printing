@@ -289,8 +289,8 @@
                 [FRONT-TITLE    (title "(spell)")]) )))|#
 
 ; ---- K2
-(define (ts-k2-healer-asp-2019->Desktop)
-  (local-require ts-k2-healer-asp-2019/katas)
+(define (ts-k2-healer-animal-asp-2019->Desktop)
+  (local-require ts-k2-healer-animal-asp-2019/katas)
 
   (set-fg-texture "k2-animal-bg.jpg"
     (begin-job "k2-healer-animal"
@@ -315,8 +315,8 @@
                 [FRONT-FG-COLOR    clear-white]
                 [FRONT-TITLE       (title "(more-enemy)")]))))
 
-#;(define (ts-k2-clicker-asp-2020->Desktop)
-  (local-require ts-k2-clicker-asp-2020/katas)
+#;(define (ts-k2-clicker-cartoon-asp-2020->Desktop)
+  (local-require ts-k2-clicker-cartoon-asp-2020/katas)
 
   (set-fg-texture "clicker-cartoon-bg.jpg"
     (begin-job "k2-clicker-cartoon"     
@@ -385,7 +385,7 @@
   ;(ts-adventure-mario-summer-camp-2019->Desktop)
   ;(ts-adventure-harrypotter-summer-camp-2019->Desktop)
 
-  (ts-k2-healer-asp-2019->Desktop)
+  (ts-k2-healer-animal-asp-2019->Desktop)
   ;(ts-k2-clicker-asp-2020->Desktop)
   
   ;(ts-3d-exploration-asp-2020->Desktop)
