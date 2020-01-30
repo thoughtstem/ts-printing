@@ -24,7 +24,8 @@
 
 
 ; ------ BATTLEARENA
-#;(define (ts-battle-arena-asp-2019->Desktop)
+#|
+(define (ts-battle-arena-asp-2019->Desktop)
   (local-require ts-battle-arena-asp-2019/katas)
 
   (set-fg-texture "battlearena-bg.jpg"
@@ -49,7 +50,7 @@
                  [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(level-design)")]))))
-#|
+
 (define (ts-battle-arena-avengers-summer-camp-2019->Desktop)
   (local-require ts-battle-arena-avengers-summer-camp-2019/katas)
 
@@ -126,10 +127,12 @@
                ((collection-apply (curryr try-take 5) trap-weapon-katas)
                  [FRONT-BG-COLOR    googly-blue]
                  [FRONT-FG-COLOR clear-white]
-                 [FRONT-TITLE    (title "(trap-weapon)")]) )))|#
+                 [FRONT-TITLE    (title "(trap-weapon)")]) )))
+|#
 
 ; ---- SURVIVAL
-#;(define (ts-survival-asp-2019->Desktop)
+#|
+(define (ts-survival-asp-2019->Desktop)
   (local-require ts-survival-asp-2019/katas)
 
   (set-fg-texture "survival-bg.jpg"
@@ -155,7 +158,7 @@
                  [FRONT-FG-COLOR clear-white]
                  [FRONT-TITLE    (title "(level-design)")]))))
 
-#|
+
 (define (ts-survival-minecraft-summer-camp-2019->Desktop)
   (local-require ts-survival-minecraft-summer-camp-2019/katas)
 
@@ -207,8 +210,10 @@
                 [FRONT-BG-COLOR    googly-blue]
                 [FRONT-FG-COLOR clear-white]
                 [FRONT-TITLE    (title "(town/sky)")]) )))
+|#
 
 ;----- ADVENTURE
+#|
 (define (ts-adventure-asp-2019->Desktop)
   (local-require ts-adventure-asp-2019/katas)
 
@@ -233,9 +238,9 @@
                ((collection-apply (curryr try-take 5) fetch-quest-katas)
                 [FRONT-BG-COLOR googly-purple]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(fetch-quest)")]) )))|#
+                [FRONT-TITLE    (title "(fetch-quest)")]) )))
 
-#|
+
 (define (ts-adventure-mario-summer-camp-2019->Desktop)
   (local-require ts-adventure-mario-summer-camp-2019/katas)
 
@@ -286,10 +291,11 @@
                ((collection-apply (curryr try-take 5) spell-katas)
                 [FRONT-BG-COLOR googly-purple]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(spell)")]) )))|#
+                [FRONT-TITLE    (title "(spell)")]) )))
+|#
 
 ; ---- K2
-(define (ts-k2-healer-animal-asp-2019->Desktop)
+#|(define (ts-k2-healer-animal-asp-2019->Desktop)
   (local-require ts-k2-healer-animal-asp-2019/katas)
 
   (set-fg-texture "k2-animal-bg.jpg"
@@ -315,7 +321,7 @@
                 [FRONT-FG-COLOR    clear-white]
                 [FRONT-TITLE       (title "(more-enemy)")]))))
 
-#;(define (ts-k2-clicker-cartoon-asp-2020->Desktop)
+(define (ts-k2-clicker-cartoon-asp-2020->Desktop)
   (local-require ts-k2-clicker-cartoon-asp-2020/katas)
 
   (set-fg-texture "clicker-cartoon-bg.jpg"
@@ -341,9 +347,37 @@
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(special)")])
                )))
+|#
+
+(define (ts-k2-clicker-pokemon-asp-2020->Desktop)
+  (local-require ts-k2-clicker-pokemon-asp-2020/katas)
+
+  (set-fg-texture "clicker-pokemon-bg.jpeg"
+    (begin-job "k2-clicker-pokemon"     
+               ((collection-apply (curryr try-take 4) day-one)
+                [FRONT-BG-COLOR googly-red]
+                [FRONT-FG-COLOR clear-white]
+                [FRONT-TITLE    (title "(collect)")])
+               ((collection-apply (curryr try-take 5) day-two)
+                [FRONT-BG-COLOR googly-orange]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(more-collect)")])
+               ((collection-apply (curryr try-take 5) day-three)
+                [FRONT-BG-COLOR googly-yellow]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(avoid)")])
+               ((collection-apply (curryr try-take 5) day-four)
+                [FRONT-BG-COLOR googly-green]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(more-avoid)")])
+               ((collection-apply (curryr try-take 5) day-five)
+                [FRONT-BG-COLOR googly-blue]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(special)")])
+               )))
 
 ; ========= VR
-#;(define (ts-3d-exploration-asp-2020->Desktop)
+#|(define (ts-3d-exploration-asp-2020->Desktop)
   (local-require ts-3d-exploration-asp-2020/katas)
 
   (set-fg-texture "3d-exploration-bg.jpg"
@@ -369,7 +403,7 @@
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(animations)")])
                )))
-
+|#
 
 (define (all->Desktop)
   ;(ts-battle-arena-asp-2019->Desktop)
@@ -385,8 +419,9 @@
   ;(ts-adventure-mario-summer-camp-2019->Desktop)
   ;(ts-adventure-harrypotter-summer-camp-2019->Desktop)
 
-  (ts-k2-healer-animal-asp-2019->Desktop)
-  ;(ts-k2-clicker-asp-2020->Desktop)
+  ;(ts-k2-healer-animal-asp-2019->Desktop)
+  ;(ts-k2-clicker-cartoon-asp-2020->Desktop)
+  (ts-k2-clicker-pokemon-asp-2020->Desktop)
   
   ;(ts-3d-exploration-asp-2020->Desktop)
 )

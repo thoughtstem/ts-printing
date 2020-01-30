@@ -11,6 +11,7 @@
 
                "https://github.com/thoughtstem/TS-K2-Katas.git?path=ts-k2-healer-animal-asp-2019"
                "https://github.com/thoughtstem/TS-K2-Katas.git?path=ts-k2-clicker-cartoon-asp-2020"
+               "https://github.com/thoughtstem/TS-K2-Katas.git?path=ts-k2-clicker-pokemon-asp-2020"
                ))
 
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
