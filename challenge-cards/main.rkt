@@ -30,7 +30,8 @@
 
   (define content-pict
     (parameterize ([current-font-size 46])
-      (para content)))
+      (para #:align 'center
+            content)))
 
   (define blank-card-bg
     (blank-bg))
