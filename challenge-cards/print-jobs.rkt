@@ -373,8 +373,33 @@
                ((collection-apply (curryr try-take 5) day-five)
                 [FRONT-BG-COLOR googly-blue]
                 [FRONT-FG-COLOR clear-white] 
-                [FRONT-TITLE    (title "(special)")])
-               )))
+                [FRONT-TITLE    (title "(special)")]))))
+
+(define (ts-k2-healer-zoo-tpes-winter->Desktop)
+  (local-require ts-k2-healer-zoo-tpes-winter/katas)
+
+  (set-fg-texture "k2-zoo-bg.jpg"
+    (begin-job "k2-healer-zoo"
+               ((collection-apply (curryr try-take 4) day-one) 
+                [FRONT-BG-COLOR    bright-red]
+                [FRONT-FG-COLOR    clear-white]
+                [FRONT-TITLE       (title "(food)")])
+               ((collection-apply (curryr try-take 5) day-two) 
+                [FRONT-BG-COLOR    bright-orange]
+                [FRONT-FG-COLOR    clear-white]
+                [FRONT-TITLE       (title "(friend)")])
+               ((collection-apply (curryr try-take 5) day-three) 
+                [FRONT-BG-COLOR    bright-yellow]
+                [FRONT-FG-COLOR    clear-white]
+                [FRONT-TITLE       (title "(more-friend)")])
+               ((collection-apply (curryr try-take 5) day-four)
+                [FRONT-BG-COLOR    bright-green]
+                [FRONT-FG-COLOR    clear-white]
+                [FRONT-TITLE       (title "(enemy)")])
+               ((collection-apply (curryr try-take 5) day-five)
+                [FRONT-BG-COLOR    bright-blue]
+                [FRONT-FG-COLOR    clear-white]
+                [FRONT-TITLE       (title "(more-enemy)")]))))
 
 ; ========= VR
 #|(define (ts-3d-exploration-asp-2020->Desktop)
@@ -405,6 +430,33 @@
                )))
 |#
 
+(define (ts-3d-orbit-asp-2020->Desktop)
+  (local-require ts-3d-orbit-asp-2020/katas)
+
+  (set-fg-texture "3d-orbit-bg.jpeg"
+    (begin-job "3d-orbit"     
+               ((collection-apply (curryr try-take 4) orbits-katas)
+                [FRONT-BG-COLOR googly-red]
+                [FRONT-FG-COLOR clear-white]
+                [FRONT-TITLE    (title "(orbits)")])
+               ((collection-apply (curryr try-take 5) star-planet-katas)
+                [FRONT-BG-COLOR googly-orange]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(star-planet)")])
+               ((collection-apply (curryr try-take 5) moon-ring-katas)
+                [FRONT-BG-COLOR googly-yellow]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(moon-ring)")])
+               ((collection-apply (curryr try-take 5) space-objects-katas)
+                [FRONT-BG-COLOR googly-green]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(space-objects)")])
+               ((collection-apply (curryr try-take 5) star-system-katas)
+                [FRONT-BG-COLOR googly-blue]
+                [FRONT-FG-COLOR clear-white] 
+                [FRONT-TITLE    (title "(star-system)")])
+               )))
+
 (define (all->Desktop)
   ;(ts-battle-arena-asp-2019->Desktop)
   ;(ts-battle-arena-avengers-summer-camp-2019->Desktop)
@@ -421,10 +473,12 @@
 
   ;(ts-k2-healer-animal-asp-2019->Desktop)
   ;(ts-k2-clicker-cartoon-asp-2020->Desktop)
-  (ts-k2-clicker-pokemon-asp-2020->Desktop)
+  ;(ts-k2-clicker-pokemon-asp-2020->Desktop)
+  (ts-k2-healer-zoo-tpes-winter->Desktop)
   
   ;(ts-3d-exploration-asp-2020->Desktop)
-)
+  ;(ts-3d-orbit-asp-2020->Desktop)
+  )
 
 
 (all->Desktop)

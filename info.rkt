@@ -8,7 +8,9 @@
                "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-survival-asp-2019"
                "https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-adventure-asp-2019"
                "https://github.com/thoughtstem/TS-VR-Katas.git?path=ts-3d-exploration-asp-2020"
+               "https://github.com/thoughtstem/TS-VR-Katas.git?path=ts-3d-orbit-asp-2020"
 
+               "https://github.com/thoughtstem/TS-K2-Katas.git?path=ts-k2-healer-zoo-tpes-winter"
                "https://github.com/thoughtstem/TS-K2-Katas.git?path=ts-k2-healer-animal-asp-2019"
                "https://github.com/thoughtstem/TS-K2-Katas.git?path=ts-k2-clicker-cartoon-asp-2020"
                "https://github.com/thoughtstem/TS-K2-Katas.git?path=ts-k2-clicker-pokemon-asp-2020"
