@@ -327,23 +327,23 @@
   (set-fg-texture "clicker-cartoon-bg.jpg"
     (begin-job "k2-clicker-cartoon"     
                ((collection-apply (curryr try-take 4) day-one)
-                [FRONT-BG-COLOR googly-red]
+                [FRONT-BG-COLOR bright-red]
                 [FRONT-FG-COLOR clear-white]
                 [FRONT-TITLE    (title "(collect)")])
                ((collection-apply (curryr try-take 5) day-two)
-                [FRONT-BG-COLOR googly-orange]
+                [FRONT-BG-COLOR bright-orange]
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(more-collect)")])
                ((collection-apply (curryr try-take 5) day-three)
-                [FRONT-BG-COLOR googly-yellow]
+                [FRONT-BG-COLOR bright-yellow]
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(avoid)")])
                ((collection-apply (curryr try-take 5) day-four)
-                [FRONT-BG-COLOR googly-green]
+                [FRONT-BG-COLOR bright-green]
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(more-avoid)")])
                ((collection-apply (curryr try-take 5) day-five)
-                [FRONT-BG-COLOR googly-blue]
+                [FRONT-BG-COLOR bright-blue]
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(special)")])
                )))
@@ -355,23 +355,23 @@
   (set-fg-texture "clicker-pokemon-bg.jpeg"
     (begin-job "k2-clicker-pokemon"     
                ((collection-apply (curryr try-take 4) day-one)
-                [FRONT-BG-COLOR googly-red]
+                [FRONT-BG-COLOR bright-red]
                 [FRONT-FG-COLOR clear-white]
                 [FRONT-TITLE    (title "(collect)")])
                ((collection-apply (curryr try-take 5) day-two)
-                [FRONT-BG-COLOR googly-orange]
+                [FRONT-BG-COLOR bright-orange]
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(more-collect)")])
                ((collection-apply (curryr try-take 5) day-three)
-                [FRONT-BG-COLOR googly-yellow]
+                [FRONT-BG-COLOR bright-yellow]
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(avoid)")])
                ((collection-apply (curryr try-take 5) day-four)
-                [FRONT-BG-COLOR googly-green]
+                [FRONT-BG-COLOR bright-green]
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(more-avoid)")])
                ((collection-apply (curryr try-take 5) day-five)
-                [FRONT-BG-COLOR googly-blue]
+                [FRONT-BG-COLOR bright-blue]
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(special)")]))))
 
@@ -435,15 +435,15 @@
 
   (set-fg-texture "3d-orbit-bg.jpeg"
     (begin-job "3d-orbit"     
-               ((collection-apply (curryr try-take 4) orbits-katas)
+               ((collection-apply (curryr try-take 4) orbit-katas)
                 [FRONT-BG-COLOR googly-red]
                 [FRONT-FG-COLOR clear-white]
                 [FRONT-TITLE    (title "(orbits)")])
-               ((collection-apply (curryr try-take 5) star-planet-katas)
+               ((collection-apply (curryr try-take 5) star-and-planet-katas)
                 [FRONT-BG-COLOR googly-orange]
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(star-planet)")])
-               ((collection-apply (curryr try-take 5) moon-ring-katas)
+               ((collection-apply (curryr try-take 5) moon-and-ring-katas)
                 [FRONT-BG-COLOR googly-yellow]
                 [FRONT-FG-COLOR clear-white] 
                 [FRONT-TITLE    (title "(moon-ring)")])
@@ -473,11 +473,11 @@
 
   ;(ts-k2-healer-animal-asp-2019->Desktop)
   ;(ts-k2-clicker-cartoon-asp-2020->Desktop)
-  ;(ts-k2-clicker-pokemon-asp-2020->Desktop)
-  (ts-k2-healer-zoo-tpes-winter->Desktop)
+  (ts-k2-clicker-pokemon-asp-2020->Desktop)
+  ;(ts-k2-healer-zoo-tpes-winter->Desktop)
   
   ;(ts-3d-exploration-asp-2020->Desktop)
-  ;(ts-3d-orbit-asp-2020->Desktop)
+  (ts-3d-orbit-asp-2020->Desktop)
   )
 
 
