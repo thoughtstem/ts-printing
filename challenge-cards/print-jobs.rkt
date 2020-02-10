@@ -433,7 +433,7 @@
 (define (ts-3d-orbit-asp-2020->Desktop)
   (local-require ts-3d-orbit-asp-2020/katas)
 
-  (set-fg-texture "3d-orbit-bg.jpeg"
+  (set-fg-texture "3d-orbit-bg.jpg"
     (begin-job "3d-orbit"     
                ((collection-apply (curryr try-take 4) orbit-katas)
                 [FRONT-BG-COLOR googly-red]
@@ -473,11 +473,11 @@
 
   ;(ts-k2-healer-animal-asp-2019->Desktop)
   ;(ts-k2-clicker-cartoon-asp-2020->Desktop)
-  (ts-k2-clicker-pokemon-asp-2020->Desktop)
-  ;(ts-k2-healer-zoo-tpes-winter->Desktop)
+  ;(ts-k2-clicker-pokemon-asp-2020->Desktop)
+  (ts-k2-healer-zoo-tpes-winter->Desktop)
   
   ;(ts-3d-exploration-asp-2020->Desktop)
-  (ts-3d-orbit-asp-2020->Desktop)
+  ;(ts-3d-orbit-asp-2020->Desktop)
   )
 
 
