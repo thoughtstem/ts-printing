@@ -474,10 +474,10 @@
   ;(ts-k2-healer-animal-asp-2019->Desktop)
   ;(ts-k2-clicker-cartoon-asp-2020->Desktop)
   ;(ts-k2-clicker-pokemon-asp-2020->Desktop)
-  (ts-k2-healer-zoo-tpes-winter->Desktop)
+  ;(ts-k2-healer-zoo-tpes-winter->Desktop)
   
   ;(ts-3d-exploration-asp-2020->Desktop)
-  ;(ts-3d-orbit-asp-2020->Desktop)
+  (ts-3d-orbit-asp-2020->Desktop)
   )
 
 
